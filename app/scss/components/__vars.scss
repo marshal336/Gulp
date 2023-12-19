@@ -1,0 +1,72 @@
+/*--Smooth--*/
+/*--Colors--*/
+$color_primary: #343045;
+$color-secondary: #4CAF4F;
+$color-three: #717171;
+$color-dark: #000;
+$color-light: #fff;
+
+/*--Fonts--*/
+$fonts_primary: Inter__3;
+
+
+
+/*$allSize: (2560, 1920, 1440, 1200, 768, 425, 375, 320);
+$startSize: 1200;
+$minSize: (5, 10, 20);
+$maxSize: (30, 40, 50);*/
+
+/*$XXl: 2560;
+$large: 1440;
+$tablet: 768;
+$L: 425;
+$M: 375;*/
+$vw: 100vw;
+$mw: 1200;
+$S: calc(20px + (50 - 20) * (($vw - 320px) / ($mw - 320)));
+
+
+
+
+/*$mobile-value: (425, 375, 320);
+$tablet-value: (768, 991); 
+$desktop-value: (1200, 1440);*/
+
+
+$gradient: linear-gradient(-45deg, #433D60, #302C42, #8176AF, #252231, #C0B7E8, #343045, #403A5F, #211E2E);
+
+
+
+
+
+
+/* Mobile */
+@media (max-width: 480px) {
+    /* styles*/
+}
+
+/* Extra small devices */
+@media (min-width: 481px) and (max-width: 767px) {
+    /* styles*/
+}
+
+/* Small tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* styles*/
+}
+
+/* Large tablets/laptops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* styles*/
+}
+
+/* Desktops */
+@media (min-width: 1200px) and (max-width: 1919px) {
+    /* styles*/
+}
+
+/* Extra large screens */
+@media (min-width: 1920px) {
+    /* styles*/
+}
+

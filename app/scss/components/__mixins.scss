@@ -1,0 +1,39 @@
+$vw: 100vw;
+
+$breakpoints: (
+  phone: 400px,
+  phone-wide: 480px,
+  phablet: 560px,
+  tablet-small: 640px,
+  tablet: 768px,
+  tablet-wide: 1024px,
+  desktop: 1248px,
+  desktop-wide: 1440px
+);
+
+$maxWidthContainer: 1248;
+
+
+@mixin adaptive($paddingMaxWidth, $paddingMinWidth, $fzPcSize, $fzMobileSize, $marginMaxSize, $marginMinSize) {
+    $addSize: $paddingMaxWidth - $paddingMinWidth;
+    $addSize: $fzPcSize - $fzMobileSize;
+    $addSize: $marginMaxSize - $marginMinSize;
+        @if ($breakpoints: desktop) {
+            @media (max-width: #{$maxWidthContainer + px}) {
+                padding: calc(#{$paddingMinWidth + px} + #{$addSize} * (($vw - 320px) / #{$maxWidthContainer}));
+                font-size: calc(#{$fzMobileSize + px} + #{$addSize} * (($vw + 320px) / #{$maxWidthContainer}));
+                margin: calc(#{$marginMaxSize + px} + #{$addSize} * (($vw + 320px) / #{$maxWidthContainer}));
+            }
+
+        } @if ($breakpoints: desktop) {
+            @media (min-width: #{$maxWidthContainer + px}) {
+                padding: calc(#{$paddingMinWidth + px} + #{$addSize} * (($vw - 320px) / #{$maxWidthContainer}));
+                font-size: calc(#{$fzMobileSize + px} + #{$addSize} * (($vw + 320px) / #{$maxWidthContainer}));
+                margin: calc(#{$marginMaxSize + px} + #{$addSize} * (($vw + 320px) / #{$maxWidthContainer}));
+            }
+        } @else {
+            font-size: calc(#{$fzMobileSize+ px} + #{$addSize} * (($vw + 320px) / #{$maxWidthContainer}));
+            padding: calc(#{$paddingMinWidth + px} + #{$addSize} * (($vw - 320px) / #{$maxWidthContainer}));
+            margin: calc(#{$marginMaxSize + px} + #{$addSize} * (($vw + 320px) / #{$maxWidthContainer}));
+        }
+    } 

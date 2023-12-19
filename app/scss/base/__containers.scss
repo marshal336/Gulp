@@ -1,0 +1,191 @@
+/*----Sizing----*/
+$mw: 1200;
+$mw-2: 950;
+$mw-3: 767;
+$mw-4: 479;
+
+
+
+/* COLORS   
+color: #433D60;
+color: #302C42;
+color #8176AF
+color #252231
+color:#C0B7E8;
+color #343045
+color #403A5F
+color #211E2E 
+*/
+
+/*MENU BURGER
+.menu__btn{
+    display: none;
+    @media screen and (max-width: 900px){
+        display: flex;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        position: relative;
+        z-index: 3;
+
+        span{
+            width: 40px;
+            height: 1px;
+            background-color: #000;
+            &::before,
+            &::after{
+                content:'';
+                width: 40px;
+                height: 1px;
+                position: absolute;
+                background-color: #000;
+                transition: 0.5s;
+            }
+            &::before{
+                top: 3px;
+            }
+            &::after{
+                bottom: 3px;
+            }
+        }
+        &.active{
+            span{
+                height: 0;
+                &::before{
+                    transform: rotate(-45deg);
+                    top: 19px;
+                }
+                &::after{
+                    transform: rotate(45deg);
+                    bottom: 19px;
+                }
+            }
+        }
+    }
+}
+*/
+
+/*MENU BURGER REVERCE
+.menu__btn{
+    display: none;
+    @media screen and (max-width: 1100px){
+        display: flex;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+        position: relative;
+        z-index: 3;
+        transform: rotate(180deg);
+        cursor: pointer;
+        span{
+            width: 40px;
+            height: 3.71px;
+            background: linear-gradient(90deg, #C0B7E8 0%, #8176AF 109.21%);
+            border-radius: 40px;
+            &::before,
+            &::after{
+                content:'';
+                width: 50px;
+                height: 3.71px;
+                border-radius: 40px;
+                position: absolute;
+                background: linear-gradient(90deg, #C0B7E8 0%, #8176AF 109.21%);
+                transition: 0.5s;
+            }
+            &::before{
+                top: 3px;
+            }
+            &::after{
+                bottom: 3px;
+            }
+        }
+        &.active{
+            span{
+                height: 0;
+                &::before{
+                    transform: rotate(46deg);
+                    top: 22px;
+                }
+                &::after{
+                    transform: rotate(-45deg);
+                    bottom: 22px;
+                }
+            }
+        }
+    }
+}
+*/
+
+/*MENU ACTIVE
+&__menu {
+    display: flex;
+    gap: 51px;
+    transition: 1s;
+    @media screen and (max-width: 900px){
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: -100rem;
+        height: 100vh;
+        width: 100vw;
+        text-align: center;
+        padding: 100px 0;
+        background-color: #fff;
+        z-index: 2;
+        &.active{
+            top: 0;
+        }
+    }
+
+}
+*/
+
+/*Arrow
+&::before,
+&::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    background-color: $color_primary;
+    top: 25px;
+}
+&::before{
+    right: -30px;
+    transform: rotate(40deg);
+}
+&::after{
+    right: -37px;
+    transform: rotate(-40deg);
+
+}
+*/
+
+/* ANIMATION LINE 
+&::before{
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 2em;
+    height: 100%;
+    transform:  translate(-10em) skew(-45deg);
+    opacity: 0.2;
+}
+&:hover{
+    &::before{
+        animation: line 0.6s;
+    }
+}
+@keyframes line {
+from{
+    transform:  translate(-10em) skew(-45deg);
+}
+to{
+    transform: translate(20em);
+}
+}
+*/

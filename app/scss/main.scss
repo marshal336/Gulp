@@ -1,0 +1,50 @@
+/*=====================================================================================================================================================================================================*/
+ @import "./components/*.scss";
+/*=====================================================================================================================================================================================================*/
+/*@import "./_header.scss";*/
+/*=====================================================================================================================================================================================================*/
+/*@import "./_footer.scss";*/
+
+body{
+    perspective: 1px;
+    transform-style: preserve-3d;
+    background-color: #000;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    &::before{
+        content: '';
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../img/1616983713_9-p-fon-dlya-rabochego-stola-kosmos-9.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        transform-origin: center;
+        transition: 1s;
+        transform: translateZ(-1px) scale(2);
+        z-index: -1;
+    }
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin: 10% 0 0 0;
+}
+
+.text{
+    font-size: 20px;
+    color: aliceblue;
+}
